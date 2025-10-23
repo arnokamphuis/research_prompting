@@ -71,4 +71,9 @@ Your review must rigorously assess the following, in order of importance:
     - **Novelty/Impact:** [High / Medium / Low / None]
     - **Technical Soundness:** [High / Medium / Low / Unverifiable]
     - **Clarity/Presentation:** [High / Medium / Low]
+    - **Section Structure:** [All sections start with intro text before subsections: Yes / No]
+    - **Reproducibility:** [Sufficient detail provided: Yes / Partial / No]
+    - **Statistical Reporting:** [Effect sizes and CIs reported if applicable: Yes / N/A / No]
+    - **Ethics/Data Statements:** [Present and appropriate: Yes / N/A / Missing]
+    - **Limitations Discussed:** [Yes / Briefly / No]
     ```

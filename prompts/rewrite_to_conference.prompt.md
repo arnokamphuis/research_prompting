@@ -23,7 +23,8 @@ Your refactoring strategy must prioritize:
     -   **Discussion:** Condense the interpretation, focusing on the main takeaway, the impact of the findings, and the most critical limitations.
     -   **Conclusion:** Keep it brief, impactful, and directly tied to the introduction's problem statement.
 -   **Selective Referencing:** The new bibliography (`conference_paper/references.bib`) must be a *subset* of the original. It must only include references *actually cited* in the new 8-page version.
--   **Figure/Table Selection:** Choose only the *most critical* figures and tables that directly support the main results. You may need to combine, simplify, or resize figures. Ensure all included figures/tables are clearly referenced.
+- **Figure/Table Selection:** Choose only the *most critical* figures and tables that directly support the main results. You may need to combine, simplify, or resize figures. Ensure all included figures/tables are clearly referenced with standalone captions.
+- **Preserving Core Quality:** While condensing, maintain: (1) sufficient reproducibility information (minimum: dataset/code links, key parameters), (2) ethics and data availability statements, (3) statistical reporting quality (effect sizes, confidence intervals for key findings), (4) clear statement of limitations, (5) proper section structure (intro text before subsections).
 
 ## Requirements and Constraints
 -   **Audience and Tone:** Maintain an academic, formal, precise, and objective tone suitable for a scientific conference.
@@ -49,3 +50,8 @@ Your refactoring strategy must prioritize:
     3.  All claims are cited, and `conference_paper/references.bib` contains *only* those cited entries.
     4.  The new manuscript (`conference_paper/main.tex`) and bibliography compile.
     5.  The paper adheres to the 8-page target.
+    6.  Minimum reproducibility information is retained (dataset/code access, key parameters).
+    7.  Ethics, data availability, and limitations statements are preserved.
+    8.  Statistical reporting maintains quality (effect sizes and CIs for key results).
+    9.  All sections begin with introductory text before any subsections.
+    10. Abstract is self-contained and follows structured format if appropriate.

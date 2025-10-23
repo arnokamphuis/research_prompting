@@ -16,9 +16,10 @@ Your goal is to produce a revised, publication-ready manuscript in `conference_p
 ## Core Revision Goals
 -   **Addressing Feedback:** Systematically and professionally address every major point raised in `review/conference_review.md`.
 -   **Page Limit Adherence:** This is a critical constraint. If addressing a review requires adding text (e.g., a clarification, a new citation), you *must* find other text to condense, rephrase, or remove to stay within the 8-page limit.
--   **Clarity & Flow:** Improve readability, sentence structure, and logical flow.
+-   **Clarity & Flow:** Improve readability, sentence structure, and logical flow. Ensure every section begins with introductory text before subsections.
 -   **Argumentation:** Strengthen the logical connections and ensure claims are precise and well-supported by the presented evidence.
 -   **Preservation of Core Findings:** Maintain the original study's data, results, and primary findings. Do NOT alter or fabricate data.
+-   **Quality Standards:** Maintain statistical reporting quality (effect sizes, CIs), reproducibility information (data/code access), ethics statements, and limitations discussion even within page constraints.
 
 ## Requirements and Constraints
 -   **Audience and Tone:** Maintain an academic, formal, precise, and objective tone.
@@ -42,3 +43,8 @@ Your goal is to produce a revised, publication-ready manuscript in `conference_p
     3.  All new factual claims have citations.
     4.  Any new bibliography entries have been added to `conference_paper/references.bib`.
     5.  The revised manuscript *still* adheres to the 8-page limit.
+    6.  Statistical reporting quality maintained (effect sizes, CIs where applicable).
+    7.  Section structure preserved (intro text before subsections).
+    8.  Ethics, data availability, and limitations statements remain present.
+    9.  Reproducibility information retained (minimum dataset/code access).
+    10. Page budget explanations provided in response document for any additions.
