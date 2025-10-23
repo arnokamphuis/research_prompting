@@ -10,8 +10,98 @@ This prompt assumes you will be provided with:
 2. **Extended materials:** Additional protocols, data files, figures, tables, code, or analyses that need documentation
 3. **Journal requirements:** Specific guidelines for supplementary materials from the target venue
 4. **Purpose specification:** What aspects need supplementary documentation (extended methods, additional results, code documentation, etc.)
+5. **Your own research documentation (if available):** If the `/methods_and_results` folder exists, use it as the primary source for supplementary materials
 
 Your goal is to produce comprehensive, well-organized supplementary materials that enhance reproducibility and provide additional context without duplicating the main manuscript.
+
+### Integration with `/methods_and_results` Folder
+
+**IMPORTANT:** Before creating supplementary materials, check if a `/methods_and_results` folder exists in the project workspace. If it does, this folder contains detailed documentation of the researcher's experimental work and should be the primary source for supplementary materials.
+
+**If `/methods_and_results` exists, you MUST:**
+1. **Use documented protocols for Supplementary Methods:**
+   - Pull extended protocol details from `methods/protocol.md` (full procedures with exact parameters)
+   - Include complete participant details from `methods/participants.md` (recruitment, demographics, flow)
+   - Include complete materials lists from `methods/materials.md` (equipment, reagents, instruments with catalog numbers)
+   - Include detailed analysis plan from `methods/analysis_plan.md` (statistical procedures, software, parameters)
+   - Include ethics documentation references from `methods/ethics/` (IRB approval numbers, consent procedures)
+
+2. **Use documented results for Supplementary Results:**
+   - Pull complete statistical outputs from `results/statistics/analysis_output/` (full model outputs, ANOVA tables, etc.)
+   - Include additional analyses documented in `results/statistics/inferential_stats.md`
+   - Include validation or robustness checks from same file
+   - Document unexpected findings from `unexpected_findings.md` (null results, anomalies)
+
+3. **Use documented figures for Supplementary Figures:**
+   - Pull additional figures from `results/figures/` that weren't included in main manuscript
+   - Use figure specifications from `results/figures/figure_specs.md`
+   - Include generation code from `results/figures/generation_code/` if helpful
+   - Include data quality/diagnostic figures
+
+4. **Use documented tables for Supplementary Tables:**
+   - Pull complete tables from `results/tables/` (demographics, full results, etc.)
+   - Include data dictionary from `results/data/data_dictionary.md` as supplementary table
+   - Format CSV/markdown tables into LaTeX supplementary tables
+   - Include table notes from `results/tables/table_notes.md`
+
+5. **Link to data and code:**
+   - Reference data files in `results/data/` (raw and processed)
+   - Reference analysis code in `results/statistics/code/`
+   - Include README files from code directories
+   - Describe data sources from `results/data/data_sources.md`
+
+6. **Include documented limitations:**
+   - Pull from `limitations.md` for extended limitations discussion
+   - Include protocol deviations from `methods/protocol.md` if documented
+
+**Example Structure When Using `/methods_and_results`:**
+```
+Supplementary Methods
+
+S1. Extended Experimental Protocol
+[Pull from /methods_and_results/methods/protocol.md - full step-by-step procedure]
+
+S2. Complete Participant Characteristics  
+[Pull from /methods_and_results/methods/participants.md - recruitment, flow, demographics]
+Supplementary Table S1: Complete demographics (from /methods_and_results/results/tables/table1_demographics.csv)
+
+S3. Materials and Equipment Specifications
+[Pull from /methods_and_results/methods/materials.md - complete equipment table]
+
+S4. Detailed Statistical Analysis Plan
+[Pull from /methods_and_results/methods/analysis_plan.md - all planned analyses with software versions]
+
+Supplementary Results
+
+S5. Complete Statistical Outputs
+[Pull full outputs from /methods_and_results/results/statistics/analysis_output/]
+Supplementary Table S2: Full ANOVA results (from analysis_output/anova_results.csv)
+
+S6. Correlation Matrix
+[Pull from /methods_and_results/results/statistics/descriptive_stats.md]
+
+S7. Sensitivity Analyses
+[Pull from /methods_and_results/results/statistics/inferential_stats.md, Sensitivity section]
+
+Supplementary Figures
+
+Supplementary Figure S1: [Title]
+[Copy from /methods_and_results/results/figures/figure3_supplementary.pdf]
+[Caption from /methods_and_results/results/figures/figure_specs.md]
+
+Data and Code Availability
+
+Data files are available in the project repository at /methods_and_results/results/data/
+- Raw data: /methods_and_results/results/data/raw/data_2025-01-15.csv
+- Processed data: /methods_and_results/results/data/processed/processed_data.csv
+- Data dictionary: /methods_and_results/results/data/data_dictionary.md
+
+Analysis code is available at /methods_and_results/results/statistics/code/
+- Main analysis: analysis.R (requires R 4.3.1, packages listed in README.md)
+- Figure generation: plot_figures.R
+```
+
+This approach ensures supplementary materials accurately represent the documented research and maximizes reproducibility by directly linking to research artifacts.
 
 ## Core Supplementary Materials Principles
 - **Complementary, Not Redundant:** Supplement but don't repeat the main text (except for brief context)

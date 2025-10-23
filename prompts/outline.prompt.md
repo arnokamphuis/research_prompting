@@ -10,8 +10,63 @@ This prompt assumes you will be provided with:
 2. **Research question/hypothesis:** The central question or hypothesis the manuscript will address
 3. **Available data/results:** Description of the study design, methods, and key findings (can be preliminary or complete)
 4. **Target venue (optional):** Intended journal or conference to tailor structure and length
+5. **Your own research documentation (if available):** If the `/methods_and_results` folder exists, incorporate documented methods, results, and findings from your own experimental work
 
 Your goal is to produce a detailed, hierarchical outline that organizes all elements into a coherent narrative structure, ready for full manuscript writing.
+
+### Integration with `/methods_and_results` Folder
+
+**IMPORTANT:** Before creating the outline, check if a `/methods_and_results` folder exists in the project workspace. If it does, this contains structured documentation of the researcher's own experimental work (protocols, data, analysis, findings).
+
+**If `/methods_and_results` exists, you MUST:**
+1. **Read the overview:** Start with `/methods_and_results/README.md` to understand the research project
+2. **Inventory documented content:**
+   - Check `methods/` for documented protocols, participants, materials, procedures, analysis plans
+   - Check `results/` for documented findings, statistics, figures, tables
+   - Note any documented unexpected findings or limitations
+3. **Integrate into outline planning:**
+   - **Methods section:** Base outline on documented protocols from `methods/protocol.md`, `methods/participants.md`, etc.
+   - **Results section:** Structure around documented findings from `results/summary.md` and `results/statistics/`
+   - **Figures/Tables:** Use documented figures from `results/figures/` and tables from `results/tables/`
+   - **Discussion/Limitations:** Incorporate documented limitations from `limitations.md` and unexpected findings from `unexpected_findings.md`
+4. **Cross-reference documentation:** In your outline, reference specific files from `/methods_and_results` (e.g., "Methods section Para 2: Pull protocol details from `/methods_and_results/methods/protocol.md` Section 3")
+5. **Identify gaps:** Note any aspects of the research that should be documented but are missing from `/methods_and_results`
+
+**Example Integration:**
+```markdown
+## Methods Section Outline (based on /methods_and_results/methods/)
+
+### Subsection 2.1: Participants
+- Source: `/methods_and_results/methods/participants.md`
+- Content: 
+  - Para 1: Recruitment methods (documented in participants.md, Section "Recruitment")
+  - Para 2: Eligibility criteria (pull from participants.md inclusion/exclusion criteria)
+  - Para 3: Sample size and demographics (pull from participants.md, Table 1)
+  - N = 127 (documented), mean age = 34.2 years, 62% female (from participants.md)
+
+### Subsection 2.2: Procedures
+- Source: `/methods_and_results/methods/protocol.md`
+- Content: Pull step-by-step from protocol.md "Main Experiment" section
+  - Phase 1: Baseline assessment (15 min)
+  - Phase 2: Intervention (30 min)
+  - Phase 3: Post-assessment (15 min)
+
+## Results Section Outline (based on /methods_and_results/results/)
+
+### Subsection 3.1: Descriptive Statistics
+- Source: `/methods_and_results/results/statistics/descriptive_stats.md`
+- Content: Pull Table 1 from descriptive_stats.md
+- [Note: Table already formatted in `/methods_and_results/results/tables/table1_demographics.csv`]
+
+### Subsection 3.2: Primary Hypothesis Test
+- Source: `/methods_and_results/results/statistics/inferential_stats.md`, Hypothesis 1
+- Content: 
+  - Documented result: t(125) = 3.45, p = 0.001, d = 0.62, 95% CI [0.25, 0.98]
+  - Interpretation: Significant improvement in outcome X
+- [Note: Figure 2 already created in `/methods_and_results/results/figures/figure2_main_result.pdf`]
+```
+
+This integration ensures your outline is grounded in actual documented research rather than hypothetical content.
 
 ## Core Outline Principles
 - **Narrative Flow:** The outline should tell a clear story from gap identification → research question → methodology → findings → interpretation → implications

@@ -10,8 +10,100 @@ This prompt assumes you will be provided with:
 2. **Supplementary materials:** If applicable (supplementary files, figures, code, data)
 3. **Target journal information:** Journal name and author guidelines/submission checklist
 4. **Project-specific requirements:** Any field-specific or venue-specific requirements from `.github/copilot-instructions.md`
+5. **Research documentation (if available):** If the `/methods_and_results` folder exists, use it to verify manuscript accuracy
 
 Your goal is to produce a detailed verification report identifying any issues that must be corrected before submission, ensuring the manuscript will not be desk-rejected for technical reasons.
+
+### Integration with `/methods_and_results` Folder for Verification
+
+**CRITICAL:** If a `/methods_and_results` folder exists in the project workspace, this pre-submission check must include verification that the manuscript accurately represents the documented research. This prevents common issues like:
+- Statistics in manuscript not matching actual analysis results
+- Methods section describing procedures differently than documented protocols
+- Sample sizes or demographics inconsistent with documented participants
+- Figures/tables in manuscript not matching documented data
+
+**If `/methods_and_results` exists, ADD THESE VERIFICATION CHECKS:**
+
+#### Documented Research Verification
+- [ ] **Methods Accuracy:**
+  - [ ] Sample size in manuscript matches documented N in `methods/participants.md`
+  - [ ] Participant demographics match documented characteristics
+  - [ ] Inclusion/exclusion criteria match documented criteria
+  - [ ] Experimental procedures match documented protocol in `methods/protocol.md`
+  - [ ] Materials/equipment match documented lists in `methods/materials.md`
+  - [ ] Analysis methods match documented analysis plan in `methods/analysis_plan.md`
+  - [ ] Software versions match documented versions
+  - [ ] IRB approval number matches documented ethics approval
+
+- [ ] **Results Accuracy:**
+  - [ ] All statistical results in manuscript match documented results in `results/statistics/inferential_stats.md`
+  - [ ] Descriptive statistics (means, SDs) match documented values in `results/statistics/descriptive_stats.md`
+  - [ ] Effect sizes match documented calculations
+  - [ ] Confidence intervals match documented intervals
+  - [ ] P-values match documented values (check exact vs. reported)
+  - [ ] No results reported in manuscript that aren't documented
+  - [ ] All documented primary results appear in manuscript
+
+- [ ] **Figure/Table Verification:**
+  - [ ] Figures in manuscript match documented figures in `results/figures/`
+  - [ ] Tables in manuscript match documented tables in `results/tables/`
+  - [ ] Figure captions match documented specifications in `results/figures/figure_specs.md`
+  - [ ] No data visualization errors (values in figures match documented data)
+
+- [ ] **Data Availability Verification:**
+  - [ ] Data availability statement accurately describes documented data in `results/data/`
+  - [ ] Links to data repositories are correct
+  - [ ] Data dictionary referenced if available in `results/data/data_dictionary.md`
+
+- [ ] **Code Availability Verification:**
+  - [ ] Code availability statement accurately describes documented code in `results/statistics/code/`
+  - [ ] Links to code repositories are correct
+  - [ ] Software dependencies match documented requirements
+
+- [ ] **Documented Limitations Included:**
+  - [ ] All limitations documented in `limitations.md` are addressed in manuscript Limitations section
+  - [ ] Protocol deviations documented in methods are mentioned if relevant
+
+- [ ] **Unexpected Findings Addressed:**
+  - [ ] Unexpected findings documented in `unexpected_findings.md` are discussed in manuscript if relevant
+  - [ ] Null results documented are addressed appropriately
+
+**Verification Process When `/methods_and_results` Exists:**
+1. Read `/methods_and_results/README.md` for research overview
+2. Compare manuscript Methods section against documented methods line-by-line
+3. Compare manuscript Results section against documented statistics line-by-line
+4. Check each statistic: does t(48) = 3.21, p = 0.002 in manuscript match documented analysis?
+5. Verify figure data matches documented data files
+6. Flag any discrepancies as HIGH PRIORITY issues
+7. Note if manuscript omits key documented findings
+8. Note if manuscript includes claims not documented
+
+**Example Verification Issues to Flag:**
+```
+CRITICAL: Results Discrepancy
+- Manuscript states: "t(127) = 3.45, p = 0.001, d = 0.62"
+- Documented result in /methods_and_results/results/statistics/inferential_stats.md: "t(125) = 3.41, p = 0.001, d = 0.61"
+- Issue: Degrees of freedom differ (127 vs 125), test statistic differs slightly
+- Action required: Verify correct analysis and update manuscript
+
+CRITICAL: Methods Discrepancy
+- Manuscript states: "Participants (N = 130) were recruited from..."
+- Documented in /methods_and_results/methods/participants.md: "Final analyzed sample: N = 127"
+- Issue: Sample size inconsistent (130 vs 127)
+- Action required: Clarify enrolled vs. analyzed sample and ensure consistency
+
+MODERATE: Missing Documented Limitation
+- /methods_and_results/limitations.md documents: "Cross-sectional design prevents causal inference"
+- Manuscript Limitations section: Does not mention design limitation
+- Action required: Add this limitation to manuscript
+
+LOW: Figure Caption Incomplete
+- /methods_and_results/results/figures/figure_specs.md specifies: "Error bars represent 95% CI"
+- Manuscript Figure 2 caption: Shows error bars but doesn't define them
+- Action required: Add error bar definition to caption
+```
+
+This verification step is the most critical function of pre-submission checking when documented research exists - it prevents the embarrassing and serious error of publishing results that don't match your actual data.
 
 ## Core Pre-Submission Check Principles
 - **Completeness:** Verify all required sections and elements are present
