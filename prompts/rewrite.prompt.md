@@ -22,6 +22,7 @@ Your goal is to produce a revised, publication-ready manuscript that skillfully 
 
 ## Requirements and Constraints
 -   **Audience and Tone:** Maintain an academic, formal, precise, and objective tone.
+-   **Structure and Flow:** Every section and subsection must begin with at least one introductory paragraph before any subsection heading. Never start a section directly with a subsection; always provide contextual text first to orient the reader and ensure logical flow.
 -   **Output Formats:** By default, produce the complete *revised* LaTeX source for `paper/main.tex`. Figures should be in `paper/figures/`, and any new or modified bibliography entries should be updated directly within `paper/references.bib`.
 -   **Citation and References:** Use BibTeX. All claims must be supported. If new literature is required (e.g., to address a missing citation from a reviewer), follow the conventions in `research-papers.prompt.md` to find and verify real sources and add them to `paper/references.bib`. Do NOT fabricate citations.
 -   **Reproducibility and Methods:** Ensure the revised methods section contains sufficient detail for replication.

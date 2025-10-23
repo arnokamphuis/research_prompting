@@ -24,7 +24,7 @@ Your review must rigorously assess the following, in order of importance:
 3.  **Impact and Novelty:** Is the contribution new, interesting, and significant enough to be presented at a conference? Does it advance the state of the art?
 4.  **Technical Soundness:** Are the methods (as described) appropriate? Do the results support the claims? Are there obvious methodological flaws, even in the condensed presentation?
 5.  **Condensation Quality:** (Use `conference_paper/refactoring_summary.md` to inform this.) Did the authors make appropriate choices in shortening the paper? Does the paper stand on its own, or does it feel like an incomplete "salami-sliced" work? Does it preserve the rigor of the original, or does the condensation obscure fatal flaws?
-6.  **Presentation and Readability:** Is the paper well-written? Are figures/tables legible, well-captioned, and essential?
+6.  **Presentation and Readability:** Is the paper well-written? Are figures/tables legible, well-captioned, and essential? Does every section and subsection begin with introductory text before any subsection heading, or do sections awkwardly jump directly into subsections without context?
 7.  **Referencing:** Are all claims supported? Are the most relevant prior works cited, or are there obvious omissions?
 
 ## Requirements and Constraints

@@ -27,6 +27,7 @@ Your refactoring strategy must prioritize:
 
 ## Requirements and Constraints
 -   **Audience and Tone:** Maintain an academic, formal, precise, and objective tone suitable for a scientific conference.
+-   **Structure and Flow:** Every section and subsection must begin with at least one introductory paragraph before any subsection heading. Never start a section directly with a subsection; always provide contextual text first to guide the reader and maintain logical flow.
 -   **Output Location:** All new files must be placed in the `conference_paper/` directory.
 -   **No Fabrication:** Crucially, do not alter the original study's data, core experimental results, or primary findings. This is a condensation and reframing task, not a revision of the underlying science.
 -   **Citation and References:** Use BibTeX. All claims must be supported by citations, which must exist in the original `paper/references.bib`.
