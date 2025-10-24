@@ -64,7 +64,7 @@
 ## Complete Workflow (13 Prompts)
 
 **Phase 1: Research and Planning**
-1. reseaerch-papers.prompt.md
+1. research-papers.prompt.md
 2. outline.prompt.md ← NEW
 
 **Phase 2: Writing**

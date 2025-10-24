@@ -125,7 +125,7 @@ Literature search → Outline → Write manuscript → Submit
 
 ### After This Update
 ```
-Literature search (reseaerch-papers)
+Literature search (research-papers)
          ↓
 Document your research (document_research) ← Ongoing throughout research
          ↓
@@ -300,7 +300,7 @@ If you already have a manuscript in progress:
 **A**: No. All prompts work with or without it. If the folder doesn't exist, prompts work normally. If it exists, they automatically integrate with it.
 
 ### Q: Can I use this for literature reviews (no experiments)?
-**A**: The `/methods_and_results` folder is designed for empirical research. For pure literature reviews, just use `reseaerch-papers.prompt.md` without `document_research.prompt.md`.
+**A**: The `/methods_and_results` folder is designed for empirical research. For pure literature reviews, just use `research-papers.prompt.md` without `document_research.prompt.md`.
 
 ### Q: What if I have data in other formats (SPSS, proprietary)?
 **A**: `document_research.prompt.md` includes templates for documenting what you have and where it is. You can reference proprietary files and include exports in open formats (CSV) for sharing.

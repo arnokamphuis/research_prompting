@@ -12,7 +12,7 @@ This document provides visual representations of the complete research paper wor
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
     ┌─────────────────────────────────────────────────────┐
-    │  1. reseaerch-papers.prompt.md                      │
+    │  1. research-papers.prompt.md                       │
     │     Systematic literature search & verification     │
     │                                                     │
     │  Input:   Research question, search keywords       │
@@ -241,7 +241,7 @@ This can happen at any point after Phase 2 (manuscript written):
 START: I need to...
 │
 ├─ Collect and verify literature
-│  └─> USE: reseaerch-papers.prompt.md
+│  └─> USE: research-papers.prompt.md
 │
 ├─ Plan my manuscript structure
 │  └─> USE: outline.prompt.md
@@ -286,7 +286,7 @@ START: I need to...
 
 | Phase | Duration | Prompts Used | Parallel Work Possible? |
 |-------|----------|--------------|------------------------|
-| **Phase 1: Research & Planning** | 1-3 weeks | reseaerch-papers, outline | No (sequential) |
+| **Phase 1: Research & Planning** | 1-3 weeks | research-papers, outline | No (sequential) |
 | **Phase 2: Writing** | 1-3 weeks | write, supplementary | Some (can draft while collecting final data) |
 | **Phase 3: Pre-Submission** | 1-3 days | review (opt), presubmission_check, cover_letter | Yes (can do in parallel with co-author review) |
 | **Phase 4: Revision** | 1-2 weeks | rebuttal, rewrite, revision_letter | No (sequential) |
@@ -298,7 +298,7 @@ START: I need to...
 
 **Shortest Path to Submission (journal):**
 ```
-reseaerch-papers (1-2 weeks) 
+research-papers (1-2 weeks) 
   → outline (2-3 days)
   → write (1-2 weeks)
   → presubmission_check (1-2 hours)
@@ -367,7 +367,7 @@ Total: 5-6 months from manuscript to presentation
 
 ```
 FOUNDATIONAL (no dependencies):
-  ├─ reseaerch-papers.prompt.md
+  ├─ research-papers.prompt.md
 
 REQUIRES LITERATURE:
   ├─ outline.prompt.md (needs literature collection)
@@ -409,7 +409,7 @@ After implementing this complete workflow, expect:
 When facing a tight deadline, minimum viable workflow:
 
 ```
-reseaerch-papers (abbreviated)
+research-papers (abbreviated)
   → write (focus on core sections)
   → presubmission_check (critical issues only)
   → cover_letter

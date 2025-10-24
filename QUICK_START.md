@@ -39,7 +39,7 @@ Citation Style: [APA/IEEE/Vancouver/etc.]
 ```
 @workspace /chatmode Researcher
 
-Using reseaerch-papers.prompt.md, search for literature on [your topic]
+Using research-papers.prompt.md, search for literature on [your topic]
 ```
 
 **Week 1-6: Document Your Own Research** ⭐ NEW (if applicable)
@@ -173,7 +173,7 @@ Using rewrite_conference.prompt.md, revise this conference paper while maintaini
 
 | I need to... | Use this prompt | Time needed |
 |--------------|-----------------|-------------|
-| Find and verify literature | `reseaerch-papers` | 1-2 weeks |
+| Find and verify literature | `research-papers` | 1-2 weeks |
 | Document my own experiments/data ⭐ NEW | `document_research` | Ongoing (throughout research) |
 | Plan manuscript structure | `outline` | 2-3 days |
 | Write full manuscript | `write` | 1-2 weeks |
@@ -194,7 +194,7 @@ Using rewrite_conference.prompt.md, revise this conference paper while maintaini
 
 ### Pattern 1: "I'm starting from scratch"
 ```
-reseaerch-papers → document_research (if own experiments) → outline → write 
+research-papers → document_research (if own experiments) → outline → write 
 → supplementary → presubmission_check → cover_letter → SUBMIT
 ```
 
@@ -325,7 +325,7 @@ If you have a tight deadline and need to skip steps:
 
 ```
 MINIMUM (can't skip these):
-  1. reseaerch-papers (abbreviated search)
+  1. research-papers (abbreviated search)
   2. document_research (if you have experimental data - CRITICAL for accuracy) ⭐ NEW
   3. write (focus on core sections)
   4. presubmission_check (critical issues only)

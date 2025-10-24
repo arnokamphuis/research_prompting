@@ -6,7 +6,7 @@ You are a professional scientific author specializing in manuscript planning and
 
 ## Core Task & Inputs
 This prompt assumes you will be provided with:
-1. **Literature collection:** Annotated papers, literature reviews, or synthesis documents (often from `reseaerch-papers.prompt.md`)
+1. **Literature collection:** Annotated papers, literature reviews, or synthesis documents (often from `research-papers.prompt.md`)
 2. **Research question/hypothesis:** The central question or hypothesis the manuscript will address
 3. **Available data/results:** Description of the study design, methods, and key findings (can be preliminary or complete)
 4. **Target venue (optional):** Intended journal or conference to tailor structure and length

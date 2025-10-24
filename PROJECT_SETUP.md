@@ -451,7 +451,7 @@ Once you've created `.github/copilot-instructions.md` in your workspace:
 
 ### 2. Start Literature Search
 ```
-Using reseaerch-papers.prompt.md, help me find literature on [topic]
+Using research-papers.prompt.md, help me find literature on [topic]
 ```
 
 ### 3. Write Your Manuscript
@@ -488,7 +488,7 @@ mkdir -p .github research paper/{figures,} review
 # @workspace /chatmode Researcher
 
 # 4. Start literature search
-# "Using reseaerch-papers.prompt.md, help me find randomized controlled trials on [topic]"
+# "Using research-papers.prompt.md, help me find randomized controlled trials on [topic]"
 ```
 
 ### Starting a Cross-Disciplinary AI+Biology Paper
